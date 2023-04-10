@@ -1,0 +1,14 @@
+mutation UserUpsert ($object: user_insert_input!) {
+  result: insert_user_one (
+    object: $object
+    on_conflict: {
+      constraint: user_pkey
+      update_columns: [
+        name
+        deleted_at
+      ]
+    }
+  ) {
+    id
+  }
+}

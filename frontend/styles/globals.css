@@ -1,0 +1,12 @@
+* {
+  font-family: 'Plus Jakarta SansVariable', sans-serif;
+  /* font-family: 'DM Sans', sans-serif; */
+}
+
+.ant-timeline-item-last {
+  padding-bottom: 0
+}
+
+.ant-table-row {
+  cursor: pointer
+}

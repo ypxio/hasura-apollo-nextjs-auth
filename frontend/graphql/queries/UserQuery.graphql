@@ -1,0 +1,7 @@
+query User ($id: uuid!) {
+  item: user_by_pk (
+    id: $id 
+  ) {
+    ...UserFields
+  }
+}

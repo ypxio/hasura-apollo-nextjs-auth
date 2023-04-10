@@ -1,0 +1,14 @@
+mutation UsersUpdate (
+  $where: user_bool_exp!
+  $data: user_set_input
+) {
+  result: update_user (
+    where: $where
+    _set: $data
+  ) {
+    affected_rows
+    returning {
+      id
+    }
+  }
+}

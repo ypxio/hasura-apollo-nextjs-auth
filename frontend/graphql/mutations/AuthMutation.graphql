@@ -1,0 +1,5 @@
+mutation AuthInsert ($object: auth_insert_input!) {
+  result: insert_auth_one(object: $object) {
+    username
+  }
+}

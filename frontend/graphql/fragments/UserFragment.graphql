@@ -1,0 +1,11 @@
+fragment UserFields on user {
+  id
+  name
+  level
+  status
+  created_at
+  is_admin
+  auth {
+    username
+  }
+}
