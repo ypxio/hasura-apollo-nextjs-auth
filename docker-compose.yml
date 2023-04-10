@@ -5,7 +5,7 @@ services:
     container_name: postgres
     image: postgres:12.1
     volumes:
-      - postgres:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: postgrespassword
 
@@ -34,4 +34,4 @@ services:
       ACTION_BASE_URL: http://host.docker.internal:3000
 
 volumes:
-  postgres: null
+  postgres_data: null
