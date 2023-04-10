@@ -1,0 +1,48 @@
+type Mutation {
+  login(
+    params: LoginInput!
+  ): AccessTokens!
+}
+
+type Query {
+  refreshJwtToken(
+    refreshToken: String!
+  ): JwtToken!
+}
+
+type Mutation {
+  signout: SignoutOutput
+}
+
+type Mutation {
+  signup(
+    params: SignupInput!
+  ): SignoutOutput
+}
+
+input SignupInput {
+  name: String!
+  username: String!
+  password: String!
+  is_admin: Boolean
+}
+
+input LoginInput {
+  username: String!
+  password: String!
+}
+
+type AccessTokens {
+  jwt: String!
+  refreshToken: String!
+  isAdmin: Boolean
+}
+
+type JwtToken {
+  jwt: String!
+}
+
+type SignoutOutput {
+  ok: Boolean!
+}
+
